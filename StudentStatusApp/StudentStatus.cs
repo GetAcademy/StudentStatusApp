@@ -5,7 +5,6 @@
         public string CurrentStatus { get; private set; }
         private List<string> _statusHistory;
 
-
         public StudentStatus()
         {
             _statusHistory = new List<string>();
@@ -18,8 +17,7 @@
                 || newStatus == "Levert dokumentasjon" && CurrentStatus == "Har søkt"
                 || newStatus == "Fått tilbud" && CurrentStatus == "Levert dokumentasjon"
                 || newStatus == "Signert kontrakt" && CurrentStatus == "Fått tilbud"
-                || newStatus == "Ikke startet" &&
-                CurrentStatus is "Har søkt" or "Levert dokumentasjon" or "Fått tilbud" or "Signert kontrakt"
+                || newStatus == "Ikke startet" && CurrentStatus is "Har søkt" or "Levert dokumentasjon" or "Fått tilbud" or "Signert kontrakt"
                 || newStatus == "Startet" && CurrentStatus == "Signert kontrakt"
                 || newStatus == "Brutt" && CurrentStatus == "Startet"
                 || newStatus == "Fullført, ikke bestått" && CurrentStatus == "Startet"

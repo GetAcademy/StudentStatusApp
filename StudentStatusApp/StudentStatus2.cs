@@ -36,6 +36,18 @@
             _statusHistory.Add(newStatus);
         }
 
+        //private bool IsValidChange(string newStatus, bool isValidChange)
+        //{
+        //    foreach (var vsc in _validStatusChanges)
+        //    {
+        //        if (vsc.From == CurrentStatus && vsc.To == newStatus)
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
+
         public bool HasHadStatus(string status)
         {
             return _statusHistory.Contains(status);

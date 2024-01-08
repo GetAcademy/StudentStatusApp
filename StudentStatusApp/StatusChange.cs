@@ -2,8 +2,8 @@
 {
     internal class StatusChange
     {
-        public string From;
-        public string To;
+        public string From { get; }
+        public string To { get; }
 
         public StatusChange(string to, string from)
         {
